@@ -11,8 +11,6 @@ import java.awt.event.ActionListener;
 
 /**
  * Entry point (UI + orchestration).
- *
- * NOTE: the start action runs in a separate thread so the Swing UI thread is not blocked.
  */
 public final class MainCanodromo {
 
@@ -33,13 +31,11 @@ public final class MainCanodromo {
                 ((JButton) e.getSource()).setEnabled(false);
 
                 new Thread(() -> {
-                    // 1) create and start all runners
                     for (int i = 0; i < can.getNumCarriles(); i++) {
                         galgos[i] = new Galgo(can.getCarril(i), String.valueOf(i), registry, control);
                         galgos[i].start();
                     }
 
-                    // 2) wait for all threads (join)
                     for (Galgo g : galgos) {
                         try {
                             g.join();
@@ -49,7 +45,6 @@ public final class MainCanodromo {
                         }
                     }
 
-                    // 3) show results ONLY after all threads finished
                     String winner = registry.getWinner();
                     int total = registry.getNextPosition() - 1;
 
