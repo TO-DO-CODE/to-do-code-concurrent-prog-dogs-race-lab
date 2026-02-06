@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\app\MainCanodromo.java
 C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\control\RaceControl.java
 C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistry.java
@@ -5,3 +6,12 @@ C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\
 C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\ui\Canodromo.java
 C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\ui\Carril.java
 C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\util\RandomGenerator.java
+=======
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\app\MainCanodromo.java
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\control\RaceControl.java
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistry.java
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\threads\Galgo.java
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\ui\Canodromo.java
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\ui\Carril.java
+D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\main\java\edu\eci\arsw\dogsrace\util\RandomGenerator.java
+>>>>>>> 60fdc5b96451508f7d900fc8a5c783b2f4cc2d27
