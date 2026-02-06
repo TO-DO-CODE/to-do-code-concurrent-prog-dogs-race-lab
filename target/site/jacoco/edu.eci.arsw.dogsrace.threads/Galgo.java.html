@@ -43,9 +43,8 @@ public class Galgo extends Thread {
         try {
 <span class="nc" id="L44">            corra();</span>
 <span class="nc" id="L45">        } catch (InterruptedException e) {</span>
-            // Restore interruption status and exit
-<span class="nc" id="L47">            Thread.currentThread().interrupt();</span>
-<span class="nc" id="L48">        }</span>
-<span class="nc" id="L49">    }</span>
+<span class="nc" id="L46">            Thread.currentThread().interrupt();</span>
+<span class="nc" id="L47">        }</span>
+<span class="nc" id="L48">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
