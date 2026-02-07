@@ -2,8 +2,6 @@ package edu.eci.arsw.dogsrace.control;
 
 /**
  * Common monitor to pause/resume all runners.
- *
- * Uses wait()/notifyAll() as requested by the lab.
  */
 public final class RaceControl {
 

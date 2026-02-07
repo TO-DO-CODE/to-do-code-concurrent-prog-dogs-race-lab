@@ -43,7 +43,6 @@ public class Galgo extends Thread {
         try {
             corra();
         } catch (InterruptedException e) {
-            // Restore interruption status and exit
             Thread.currentThread().interrupt();
         }
     }

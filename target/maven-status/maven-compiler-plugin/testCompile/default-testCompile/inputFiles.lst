@@ -1,2 +1,7 @@
-/Users/javiertoquica/Work/ECI/GitHub/Lab_concurrent-prog-dogs-race-java21/src/test/java/edu/eci/arsw/dogsrace/control/RaceControlTest.java
-/Users/javiertoquica/Work/ECI/GitHub/Lab_concurrent-prog-dogs-race-java21/src/test/java/edu/eci/arsw/dogsrace/domain/ArrivalRegistryTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\app\MainCanodromoTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\control\RaceControlTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\threads\GalgoTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\ui\CanodromoTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\ui\CarrilTest.java
+D:\arsw\el que es\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\util\RandomGeneratorTest.java

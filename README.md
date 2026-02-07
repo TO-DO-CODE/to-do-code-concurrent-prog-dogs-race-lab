@@ -98,3 +98,75 @@ Implemente las funcionalidades **Stop** y **Continue**.
 
 ## Observaciones finales
 Este laboratorio refuerza conceptos clave de **programación concurrente**, **diseño correcto de sincronización** y **arquitectura por capas**, que serán reutilizados en laboratorios posteriores.
+
+# EVIDENCIAS ✅✅
+
+## Problemas Iniciales Identificados
+*1.* Condiciones de carrera: Los 17 galgos accedían a nextPosition y winner al mismo
+tiempo, causando posiciones duplicadas.
+
+*2.* Resultados prematuros: Se mostraba el ganador antes de que todos los galgos terminaran (faltaba join()).
+
+*3.* Sin control de pausa: No había forma de pausar/reanudar la carrera (faltaba wait()/notifyAll())
+
+##  Regiones Críticas
+
+En la aplicación existen secciones donde varios hilos acceden a recursos compartidos al mismo tiempo. Estas secciones se denominan regiones críticas y, si no se controlan, pueden producir condiciones de carrera.
+
+###  ArrivalRegistry (Registro de llegada)
+
+**Problema:**  
+Varios galgos pueden leer el valor de `nextPosition` antes de que este sea incrementado, provocando que dos o más galgos obtengan la misma posición de llegada.
+
+**Solución:**  
+Se protege el método `registerArrival` usando `synchronized`, garantizando que solo un hilo pueda ejecutarlo a la vez.
+
+```java
+public synchronized ArrivalSnapshot registerArrival(String dogName) {
+    final int position = nextPosition++;
+    if (position == 1) {
+        winner = dogName;
+    }
+    return new ArrivalSnapshot(position, winner);
+}
+```
+### RaceControl (Control de pausa)
+
+**Problema:**  
+La interfaz gráfica (UI) puede modificar el valor de la variable `paused` mientras los hilos (galgos) la están leyendo, lo que provoca que algunos galgos no respeten correctamente la pausa de la carrera.
+
+**Solución:**  
+Se implementa un monitor común utilizando los mecanismos `wait()` y `notifyAll()` para sincronizar a los hilos.
+
+```java
+public void awaitIfPaused() throws InterruptedException {
+    synchronized (monitor) {
+        while (paused) {
+            monitor.wait();
+        }
+    }
+}
+
+public void resume() {
+    synchronized (monitor) {
+        paused = false;
+        monitor.notifyAll();
+    }
+}
+```
+## Evidencias De Ejecucion 💻👾
+
+<img width="1364" height="762" alt="image" src="https://github.com/user-attachments/assets/5e110442-4aa0-4ed9-b78c-7bf85ca271d3" />
+
+<img width="1355" height="581" alt="image" src="https://github.com/user-attachments/assets/43874899-f456-4419-98d1-85df755cbbb7" />
+
+## Cobertura de Pruebas Jacoco ⚡😎
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ccc133e8-8dd5-47b2-8625-6a190d2514b0" />
+
+
+
+
+
+
+
