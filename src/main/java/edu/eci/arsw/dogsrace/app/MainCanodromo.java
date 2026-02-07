@@ -20,6 +20,14 @@ public final class MainCanodromo {
     private static final ArrivalRegistry registry = new ArrivalRegistry();
     private static final RaceControl control = new RaceControl();
 
+    public static Canodromo getCanodromo() {
+        return can;
+    }
+
+    public static void setCanodromo(Canodromo canodromo) {
+        can = canodromo;
+    }
+
     public static void main(String[] args) {
         can = new Canodromo(17, 100);
         galgos = new Galgo[can.getNumCarriles()];

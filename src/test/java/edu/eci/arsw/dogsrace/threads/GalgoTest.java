@@ -5,6 +5,7 @@ import edu.eci.arsw.dogsrace.domain.ArrivalRegistry;
 import edu.eci.arsw.dogsrace.ui.Carril;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class GalgoTest {
@@ -17,7 +18,7 @@ class GalgoTest {
 
         when(carril.size()).thenReturn(3);
 
-        when(registry.registerArrival(anyString())).thenReturn(null);
+        when(registry.registerArrival(anyString())).thenReturn(new ArrivalRegistry.ArrivalSnapshot(1, "Firulais"));
 
         Galgo galgo = new Galgo(carril, "Firulais", registry, control);
 
@@ -46,5 +47,22 @@ class GalgoTest {
         galgo.join();
 
         verify(carril, atMost(10)).setPasoOn(anyInt());
+    }
+
+    @Test
+    void deberiaManejarInterrupcionEnRun() throws Exception {
+        Carril carril = mock(Carril.class);
+        ArrivalRegistry registry = mock(ArrivalRegistry.class);
+        RaceControl control = mock(RaceControl.class);
+
+        when(carril.size()).thenReturn(10);
+        // Ensure awaitIfPaused throws InterruptedException
+        doThrow(new InterruptedException()).when(control).awaitIfPaused();
+
+        Galgo galgo = new Galgo(carril, "InterruptedDog", registry, control);
+        galgo.start();
+        galgo.join(1000);
+
+        assertFalse(galgo.isAlive(), "Thread should have finished after interruption");
     }
 }

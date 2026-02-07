@@ -44,4 +44,14 @@ class RaceControlTest {
         worker.join(500);
         assertFalse(worker.isAlive());
     }
+
+    @Test
+    void isPaused_shouldReturnCorrectStatus() {
+        RaceControl control = new RaceControl();
+        assertFalse(control.isPaused());
+        control.pause();
+        assertTrue(control.isPaused());
+        control.resume();
+        assertFalse(control.isPaused());
+    }
 }

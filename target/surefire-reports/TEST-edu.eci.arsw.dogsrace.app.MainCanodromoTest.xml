@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.235" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.app.MainCanodromoTest" time="1.856" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,6 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="pauseAndResume_blocksAndReleasesThreads" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.229"/>
-  <testcase name="isPaused_shouldReturnCorrectStatus" classname="edu.eci.arsw.dogsrace.control.RaceControlTest" time="0.002"/>
+  <testcase name="testListenersCoverage" classname="edu.eci.arsw.dogsrace.app.MainCanodromoTest" time="1.796">
+    <system-out><![CDATA[Carrera pausada!
+Carrera reanudada!
+]]></system-out>
+  </testcase>
 </testsuite>
