@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.eci.arsw.dogsrace.domain.ArrivalRegistryTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 s -- in edu.eci.arsw.dogsrace.domain.ArrivalRegistryTest
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s -- in edu.eci.arsw.dogsrace.domain.ArrivalRegistryTest
->>>>>>> 60fdc5b96451508f7d900fc8a5c783b2f4cc2d27
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.149 s -- in edu.eci.arsw.dogsrace.domain.ArrivalRegistryTest

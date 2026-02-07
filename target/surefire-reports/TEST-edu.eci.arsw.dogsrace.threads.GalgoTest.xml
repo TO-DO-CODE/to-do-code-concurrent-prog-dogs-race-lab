@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.domain.ArrivalRegistryTest" time="0.149" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.eci.arsw.dogsrace.threads.GalgoTest" time="4.66" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,5 +58,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="registerArrival_assignsUniquePositionsAndWinner" classname="edu.eci.arsw.dogsrace.domain.ArrivalRegistryTest" time="0.125"/>
+  <testcase name="deberiaManejarInterrupcionSinColgarse" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="4.276">
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Jasua\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="deberiaCorrerHastaElFinalYRegistrarLlegada" classname="edu.eci.arsw.dogsrace.threads.GalgoTest" time="0.363">
+    <system-err><![CDATA[Exception in thread "Firulais" java.lang.NullPointerException: Cannot invoke "edu.eci.arsw.dogsrace.domain.ArrivalRegistry$ArrivalSnapshot.position()" because "snapshot" is null
+	at edu.eci.arsw.dogsrace.threads.Galgo.corra(Galgo.java:36)
+	at edu.eci.arsw.dogsrace.threads.Galgo.run(Galgo.java:44)
+]]></system-err>
+  </testcase>
 </testsuite>

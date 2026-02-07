@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\control\RaceControlTest.java
-C:\Users\maria\Downloads\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.java
-=======
-D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\control\RaceControlTest.java
-D:\Tomas\ARSW\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.java
->>>>>>> 60fdc5b96451508f7d900fc8a5c783b2f4cc2d27
+C:\Users\Jasua\Downloads\LABO2\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\control\RaceControlTest.java
+C:\Users\Jasua\Downloads\LABO2\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\domain\ArrivalRegistryTest.java
+C:\Users\Jasua\Downloads\LABO2\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\threads\GalgoTest.java
+C:\Users\Jasua\Downloads\LABO2\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\ui\CanodromoTest.java
+C:\Users\Jasua\Downloads\LABO2\to-do-code-concurrent-prog-dogs-race-lab\src\test\java\edu\eci\arsw\dogsrace\ui\CarrilTest.java
