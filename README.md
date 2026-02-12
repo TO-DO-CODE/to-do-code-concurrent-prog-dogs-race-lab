@@ -214,8 +214,9 @@ public void resume() {
 ## Evidencias De Ejecucion 💻👾
 
 <img width="1364" height="762" alt="image" src="https://github.com/user-attachments/assets/5e110442-4aa0-4ed9-b78c-7bf85ca271d3" />
-
 <img width="1355" height="581" alt="image" src="https://github.com/user-attachments/assets/43874899-f456-4419-98d1-85df755cbbb7" />
+
+![img.png](img.png)
 
 ## Cobertura de Pruebas Jacoco ⚡😎
 
