@@ -1,5 +1,7 @@
 package edu.eci.arsw.dogsrace.control;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 /**
  * Common monitor to pause/resume all runners.
  */
@@ -7,6 +9,7 @@ public final class RaceControl {
 
     private final Object monitor = new Object();
     private boolean paused = false;
+    private final AtomicBoolean finished = new AtomicBoolean(false);
 
     public void pause() {
         synchronized (monitor) {
@@ -19,6 +22,18 @@ public final class RaceControl {
             paused = false;
             monitor.notifyAll();
         }
+    }
+
+    public void finish() {
+        finished.set(true);
+    }
+
+    public boolean isFinished() {
+        return finished.get();
+    }
+
+    public void restart() {
+        finished.set(false);
     }
 
     public boolean isPaused() {

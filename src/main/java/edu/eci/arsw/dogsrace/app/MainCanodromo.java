@@ -37,6 +37,8 @@ public final class MainCanodromo {
             @Override
             public void actionPerformed(final ActionEvent e) {
                 ((JButton) e.getSource()).setEnabled(false);
+                control.restart();
+                registry.restart();
 
                 new Thread(() -> {
                     for (int i = 0; i < can.getNumCarriles(); i++) {
@@ -58,6 +60,10 @@ public final class MainCanodromo {
 
                     can.winnerDialog(winner, total);
                     System.out.println("El ganador fue: " + winner);
+
+                    for (String result : registry.getArrivals()) {
+                        can.addResult(result);
+                    }
                 }, "race-orchestrator").start();
             }
         });

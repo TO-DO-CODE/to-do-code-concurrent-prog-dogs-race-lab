@@ -26,6 +26,10 @@ public class Galgo extends Thread {
         while (paso < carril.size()) {
             control.awaitIfPaused();
 
+            if (control.isFinished()) {
+                break;
+            }
+
             Thread.sleep(100);
             carril.setPasoOn(paso++);
             carril.displayPasos(paso);
@@ -34,6 +38,7 @@ public class Galgo extends Thread {
                 carril.finish();
                 var snapshot = registry.registerArrival(getName());
                 System.out.printf("El galgo %s llego en la posicion %d%n", getName(), snapshot.position());
+                control.finish();
             }
         }
     }

@@ -13,6 +13,8 @@ import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JOptionPane;
 import javax.swing.border.EmptyBorder;
 
@@ -33,6 +35,8 @@ public class Canodromo extends JFrame {
 	private JButton butStart = new JButton("Start");
 	private JButton butStop = new JButton("Stop");
 	private JButton butContinue = new JButton("Continue");
+
+	private JTextArea resultsArea;
 
 	/**
 	 * Constructor
@@ -84,6 +88,11 @@ public class Canodromo extends JFrame {
 		butPanel.add(butStop);
 		butPanel.add(butContinue);
 		cont.add(butPanel, BorderLayout.SOUTH);
+
+		resultsArea = new JTextArea(10, 50);
+		resultsArea.setEditable(false);
+		JScrollPane scrollPane = new JScrollPane(resultsArea);
+		cont.add(scrollPane, BorderLayout.CENTER);
 
 		this.setSize(butWidht * longPista, butHeight * nCarriles + 400);
 
@@ -158,7 +167,12 @@ public class Canodromo extends JFrame {
 	}
 
 	public void winnerDialog(String winner, int total) {
+		resultsArea.append("El ganador fue:" + winner + " de un total de " + total + "\n");
 		JOptionPane.showMessageDialog(null, "El ganador fue:" + winner + " de un total de " + total);
+	}
+
+	public void addResult(String result) {
+		resultsArea.append(result + "\n");
 	}
 
 	public JButton getButStart() {
